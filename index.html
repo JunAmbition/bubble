@@ -1,32 +1,43 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>버블팝 설명영상</title>
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Magic animation button - Bedimcode</title>
   </head>
   <body>
-    <a
-      href="https://www.youtube.com/embed/DUP28DvntaA?autoplay=1&mute=1&fs=1"
-      target="_blank"
-      id="fullscreen-link"
-      >설명영상 바로 보러가기</a
-    >
+    <div class="container">
+      <a
+        href="https://www.youtube.com/watch?v=3MteSlpxCpo&list=RD3MteSlpxCpo&start_radio=1"
+        class="button"
+      >
+        <div class="button__content">
+          <span class="button__text">Let's see</span>
+          <!-- <i class="ri-download-cloud-fill button__icon"></i> -->
 
-    <script>
-      // Automatically make the video fullscreen when the link is clicked
-      document
-        .getElementById('fullscreen-link')
-        .addEventListener('click', function (e) {
-          e.preventDefault(); // Prevent the default link behavior
-          const url = this.href;
+          <div class="button__reflection-1"></div>
+          <div class="button__reflection-2"></div>
+        </div>
 
-          // Open a new window with fullscreen mode
-          const newWindow = window.open(url, '_blank');
-          if (newWindow) {
-            newWindow.focus();
-          }
-        });
-    </script>
+        <img src="img/star.png" alt="" class="button__star-1" />
+        <img src="img/star.png" alt="" class="button__star-2" />
+        <img src="img/circle.png" alt="" class="button__circle-1" />
+        <img src="img/circle.png" alt="" class="button__circle-2" />
+        <img src="img/diamond.png" alt="" class="button__diamond" />
+        <img src="img/triangle.png" alt="" class="button__triangle" />
+
+        <div class="button__shadow"></div>
+      </a>
+    </div>
   </body>
 </html>
