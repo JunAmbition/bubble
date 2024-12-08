@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fullscreen YouTube Video</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>버블팝 설명영상</title>
   </head>
   <body>
-    <div class="video-container">
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/DUP28DvntaA?si=1m_BO1T8jw9zsMV3"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-    </div>
+    <a
+      href="https://www.youtube.com/embed/DUP28DvntaA?autoplay=1&mute=1&fs=1"
+      target="_blank"
+      id="fullscreen-link"
+      >설명영상 바로 보러가기</a
+    >
+
+    <script>
+      // Automatically make the video fullscreen when the link is clicked
+      document
+        .getElementById('fullscreen-link')
+        .addEventListener('click', function (e) {
+          e.preventDefault(); // Prevent the default link behavior
+          const url = this.href;
+
+          // Open a new window with fullscreen mode
+          const newWindow = window.open(url, '_blank');
+          if (newWindow) {
+            newWindow.focus();
+          }
+        });
+    </script>
   </body>
 </html>
